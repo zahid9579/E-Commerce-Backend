@@ -55,6 +55,7 @@ class User(AbstractBaseUser):
     def __str__(self):
         return self.email
 
+
     def has_perm(self, perm, obj=None):
         "Does the user have a specific permission?"
         # Simplest possible answer: Yes, always
@@ -64,6 +65,7 @@ class User(AbstractBaseUser):
         "Does the user have permissions to view the app `app_label`?"
         # Simplest possible answer: Yes, always
         return True
+    
 
     @property
     def is_staff(self):
